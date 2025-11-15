@@ -1,43 +1,51 @@
 // components/common/Section.tsx
-"use client";
-
-import { ReactNode } from "react";
-import { motion } from "framer-motion";
-import { fadeInUp } from "@/lib/animations";
+import React from "react";
 
 type SectionProps = {
   id?: string;
   title?: string;
   eyebrow?: string;
-  children: ReactNode;
+  align?: "left" | "center";
+  className?: string;
+  children: React.ReactNode;
 };
 
-export function Section({ id, title, eyebrow, children }: SectionProps) {
+export function Section({
+  id,
+  title,
+  eyebrow,
+  align = "left",
+  className,
+  children,
+}: SectionProps) {
+  const base =
+    "max-w-6xl mx-auto px-4 py-8 md:py-10"; // базовая ширина и отступы секций
+  const mergedClassName = className ? `${base} ${className}` : base;
+  const isCenter = align === "center";
+
   return (
-    <section id={id} className="py-10 md:py-14">
-      <div className="max-w-6xl mx-auto px-4">
-        {(title || eyebrow) && (
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={fadeInUp}
-            className="mb-6"
-          >
-            {eyebrow && (
-              <div className="text-[10px] uppercase tracking-[0.2em] text-cyan-400 mb-1.5">
-                {eyebrow}
-              </div>
-            )}
-            {title && (
-              <h2 className="text-xl md:text-2xl font-semibold tracking-tight">
-                {title}
-              </h2>
-            )}
-          </motion.div>
-        )}
-        {children}
-      </div>
+    <section id={id} className={mergedClassName}>
+      {(title || eyebrow) && (
+        <header
+          className={
+            "mb-4 md:mb-6 space-y-1" +
+            (isCenter ? " text-center max-w-2xl mx-auto" : "")
+          }
+        >
+          {eyebrow && (
+            <p className="text-[11px] uppercase tracking-[0.16em] text-slate-500">
+              {eyebrow}
+            </p>
+          )}
+          {title && (
+            <h2 className="text-lg md:text-xl font-semibold text-slate-50">
+              {title}
+            </h2>
+          )}
+        </header>
+      )}
+
+      {children}
     </section>
   );
 }
