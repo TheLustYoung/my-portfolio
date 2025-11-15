@@ -20,8 +20,9 @@ const interestStack = [
   "Redux",
   "RabbitMQ",
   "PostgreSQL",
-  "Symfony",
-  "Kubernetes",
+  "Swift",
+  "Chart.js",
+  "Axios",
 ];
 
 export function SkillsSection() {
