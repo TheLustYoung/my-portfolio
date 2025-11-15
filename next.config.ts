@@ -1,7 +1,15 @@
-export default {
-  experimental: {
-    turbopack: {
-      root: __dirname,
-    },
+// next.config.ts
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "api.qrserver.com",
+      },
+    ],
   },
 };
+
+export default nextConfig;
