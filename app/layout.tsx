@@ -18,11 +18,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ru">
-      <body className="bg-[#05060a] text-slate-100 antialiased">
+    <html lang="ru" className="bg-black">
+      <body className="min-h-screen bg-black text-slate-100 antialiased overflow-x-hidden">
         <I18nProvider>
           <Preloader>
-            <div className="min-h-screen flex flex-col">
+            {/* Внутренний контейнер с лёгким градиентом, но на фоне всегда чистый black */}
+            <div className="min-h-screen flex flex-col bg-gradient-to-b from-black via-black to-[#05060a]">
               <Header />
               <main className="flex-1">{children}</main>
               <Footer />

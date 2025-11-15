@@ -5,93 +5,81 @@ export type ProjectType = "commercial" | "pet" | "experiment";
 export type Project = {
   id: string;
   slug: string;
-  title: string;
-  shortDescription: string;
-  longDescription: string;
   type: ProjectType;
   stack: string[];
-  githubUrl?: string;
-  demoUrl?: string;
+  image: string;
+  gallery?: string[];
+  github?: string;
+  demo?: string;
+  i18nKey: string;
 };
 
 export const projects: Project[] = [
   {
     id: "landing-neon",
-    slug: "landing-neon",
-    title: "fullcycle-agency",
-    shortDescription:
-      "Футуристичный лендинг с неоновыми акцентами и плавными анимациями на React + Framer Motion.",
-    longDescription:
-      "Одностраничный лендинг с акцентом на анимации и ощущение «дорогого» продукта. Реализованы плавные scroll-анимации, hover-эффекты, адаптивная сетка и интеграция с простым API для формы.",
+    slug: "landing-neon", // ВАЖНО: именно так
     type: "pet",
     stack: ["Vite + React", "JavaScript", "Framer Motion", "Tailwind CSS"],
-    githubUrl: "https://github.com/TheLustYoung/fullcycle-agency",
-    demoUrl: "https://1233-tawny.vercel.app",
+    github: "https://github.com/TheLustYoung/fullcycle-agency",
+    demo: "https://1233-tawny.vercel.app",
+    image: "/projects/landing-neon/landing-neon-1-1.jpg",
+    gallery: [
+      "/projects/landing-neon/landing-neon-1-1.jpg",
+      "/projects/landing-neon/landing-neon-2-1.jpg",
+      "/projects/landing-neon/landing-neon-3-1.jpg",
+      "/projects/landing-neon/landing-neon-4.jpg",
+      "/projects/landing-neon/landing-neon-5.jpg",
+      "/projects/landing-neon/landing-neon-6.jpg",
+    ],
+    i18nKey: "projects.landingNeon",
   },
   {
     id: "shop-frontend",
     slug: "shop-frontend",
-    title: "Shop Frontend",
-    shortDescription:
-      "SPA интернет-магазин с фильтрами, корзиной и интеграцией c API.",
-    longDescription:
-      "Фронтенд магазина на базе React/Next с клиентской и серверной отрисовкой. Реализованы фильтры, пагинация, корзина и работа с REST API. Уделено внимание читаемости кода и структуре компонентов.",
     type: "pet",
-    stack: ["Vite + React", "JavaScript (ES6+)", "React Router", "Framer Motion", "Context API", "localStorage", "Tailwind CSS",],
-    githubUrl: "https://github.com/TheLustYoung/shop-frontend",
-    demoUrl: "https://shop-frontend-five-eta.vercel.app",
+    stack: [
+      "Vite + React",
+      "JavaScript (ES6+)",
+      "React Router",
+      "Framer Motion",
+      "Context API",
+      "localStorage",
+      "Tailwind CSS",
+    ],
+    github: "https://github.com/TheLustYoung/shop-frontend",
+    demo: "https://shop-frontend-five-eta.vercel.app",
+    image: "/projects/shop-frontend/shop-frontend-1.jpg",
+    gallery: [
+      "/projects/shop-frontend/shop-frontend-1.jpg",
+      "/projects/shop-frontend/shop-frontend-2.jpg",
+      "/projects/shop-frontend/shop-frontend-3.jpg",
+      "/projects/shop-frontend/shop-frontend-4.jpg",
+      "/projects/shop-frontend/shop-frontend-5.jpg",
+    ],
+    i18nKey: "projects.shopFrontend",
   },
   {
     id: "aircontrol-admin",
     slug: "aircontrol-admin",
-    title: "Aircontrol admin-panel",
-    shortDescription:
-      "Админ-панель в стиле Nike для управления товарами и заказами. Высокая скорость работы, современный UI и чистая архитектура.",
-    longDescription:
-      "AirControl Admin — это современная админ-панель, вдохновлённая дизайном Nike и созданная на базе Next.js 15 + React 19. Проект использует тёмную тему, минималистичный интерфейс и аккуратную модульную структуру. В админке реализованы разделы управления товарами, заказами и статистикой.  Благодаря Tailwind CSS и React Compiler система работает максимально быстро, а архитектура на основе App Router делает код гибким и поддерживаемым. Проект создан как реальный рабочий инструмент и может масштабироваться под полноценный e-commerce.",
     type: "pet",
-    stack: ["Next.ts", "TypeScript", "ESLint", "React Compiler", "Custom Components", "PostCSS", "Tailwind CSS",],
-    githubUrl: "https://github.com/TheLustYoung/aircontrol-admin",
-    demoUrl: "https://aircontrol-admin.vercel.app",
-  },
-  {
-    id: "Project4",
-    slug: "shop-frontend",
-    title: "Shop Frontend",
-    shortDescription:
-      "SPA интернет-магазин с фильтрами, корзиной и интеграцией c API.",
-    longDescription:
-      "Фронтенд магазина на базе React/Next с клиентской и серверной отрисовкой. Реализованы фильтры, пагинация, корзина и работа с REST API. Уделено внимание читаемости кода и структуре компонентов.",
-    type: "pet",
-    stack: ["Vite + React", "JavaScript (ES6+)", "React Router", "Framer Motion", "Context API", "localStorage", "Tailwind CSS",],
-    githubUrl: "https://github.com/TheLustYoung/shop-frontend",
-    demoUrl: "https://shop-frontend-five-eta.vercel.app",
-  },
-  {
-    id: "Project5",
-    slug: "shop-frontend",
-    title: "Shop Frontend",
-    shortDescription:
-      "SPA интернет-магазин с фильтрами, корзиной и интеграцией c API.",
-    longDescription:
-      "Фронтенд магазина на базе React/Next с клиентской и серверной отрисовкой. Реализованы фильтры, пагинация, корзина и работа с REST API. Уделено внимание читаемости кода и структуре компонентов.",
-    type: "pet",
-    stack: ["Vite + React", "JavaScript (ES6+)", "React Router", "Framer Motion", "Context API", "localStorage", "Tailwind CSS",],
-    githubUrl: "https://github.com/TheLustYoung/shop-frontend",
-    demoUrl: "https://shop-frontend-five-eta.vercel.app",
-  },
-  {
-    id: "Project6 ",
-    slug: "shop-frontend",
-    title: "Shop Frontend",
-    shortDescription:
-      "SPA интернет-магазин с фильтрами, корзиной и интеграцией c API.",
-    longDescription:
-      "Фронтенд магазина на базе React/Next с клиентской и серверной отрисовкой. Реализованы фильтры, пагинация, корзина и работа с REST API. Уделено внимание читаемости кода и структуре компонентов.",
-    type: "pet",
-    stack: ["Vite + React", "JavaScript (ES6+)", "React Router", "Framer Motion", "Context API", "localStorage", "Tailwind CSS",],
-    githubUrl: "https://github.com/TheLustYoung/shop-frontend",
-    demoUrl: "https://shop-frontend-five-eta.vercel.app",
+    stack: [
+      "Next.ts", 
+      "TypeScript", 
+      "ESLint", 
+      "React Compiler", 
+      "Custom Components", 
+      "PostCSS",
+      "Tailwind CSS",
+    ],
+    github: "https://github.com/TheLustYoung/aircontrol-admin",
+    demo: "https://aircontrol-admin.vercel.app",
+    image: "/projects/airControl/cover.jpg",
+    gallery: [
+      "/projects/airControl/airControl-1.jpg",
+      "/projects/airControl/airControl-2.jpg",
+      "/projects/airControl/airControl-3.jpg",
+    ],
+    i18nKey: "projects.adminPanel",
   },
 ];
 

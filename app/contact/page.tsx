@@ -4,12 +4,14 @@
 import { ContactForm } from "@/components/contact/ContactForm";
 import Image from "next/image";
 import { useI18n } from "@/lib/i18n";
+import { BackButton } from "@/components/common/BackButton";
 
 export default function ContactPage() {
   const { t } = useI18n();
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-10">
+      <BackButton />
       <h1 className="text-lg md:text-xl font-semibold mb-4">
         {t("contact.pageTitle")}
       </h1>
