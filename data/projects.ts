@@ -42,17 +42,17 @@ export const projects: Project[] = [
     demoUrl: "https://shop-frontend-five-eta.vercel.app",
   },
   {
-    id: "Project3",
-    slug: "shop-frontend",
-    title: "Shop Frontend",
+    id: "aircontrol-admin",
+    slug: "aircontrol-admin",
+    title: "Aircontrol admin-panel",
     shortDescription:
-      "SPA интернет-магазин с фильтрами, корзиной и интеграцией c API.",
+      "Админ-панель в стиле Nike для управления товарами и заказами. Высокая скорость работы, современный UI и чистая архитектура.",
     longDescription:
-      "Фронтенд магазина на базе React/Next с клиентской и серверной отрисовкой. Реализованы фильтры, пагинация, корзина и работа с REST API. Уделено внимание читаемости кода и структуре компонентов.",
+      "AirControl Admin — это современная админ-панель, вдохновлённая дизайном Nike и созданная на базе Next.js 15 + React 19. Проект использует тёмную тему, минималистичный интерфейс и аккуратную модульную структуру. В админке реализованы разделы управления товарами, заказами и статистикой.  Благодаря Tailwind CSS и React Compiler система работает максимально быстро, а архитектура на основе App Router делает код гибким и поддерживаемым. Проект создан как реальный рабочий инструмент и может масштабироваться под полноценный e-commerce.",
     type: "pet",
-    stack: ["Vite + React", "JavaScript (ES6+)", "React Router", "Framer Motion", "Context API", "localStorage", "Tailwind CSS",],
-    githubUrl: "https://github.com/TheLustYoung/shop-frontend",
-    demoUrl: "https://shop-frontend-five-eta.vercel.app",
+    stack: ["Next.ts", "TypeScript", "ESLint", "React Compiler", "Custom Components", "PostCSS", "Tailwind CSS",],
+    githubUrl: "https://github.com/TheLustYoung/aircontrol-admin",
+    demoUrl: "https://aircontrol-admin.vercel.app",
   },
   {
     id: "Project4",
