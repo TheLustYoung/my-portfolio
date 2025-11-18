@@ -81,6 +81,31 @@ export const projects: Project[] = [
     ],
     i18nKey: "projects.adminPanel",
   },
+  {
+    id: "TLYshop",
+    slug: "TLYshop",
+    type: "pet",
+    stack: [
+      "Next.ts", 
+      "TypeScript", 
+      "ESLint", 
+      "React Compiler", 
+      "Custom Components", 
+      "PostCSS",
+      "Tailwind CSS",
+      "Prisma",
+      "PostgreSQL"
+    ],
+    github: "https://github.com/TheLustYoung/",
+    demo: "",
+    image: "/projects/tlyshop/title.png",
+    gallery: [
+      "/projects/tlyshop/title.png",
+      "/projects/tlyshop/main.png",
+      "/projects/tlyshop/footer.png",
+    ],
+    i18nKey: "projects.",
+  },
 ];
 
 export function getProjectBySlug(slug: string): Project | undefined {

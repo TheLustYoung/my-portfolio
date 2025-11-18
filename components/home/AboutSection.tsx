@@ -22,10 +22,10 @@ export function AboutSection() {
 
         {/* Фото */}
         <div className="flex justify-center md:justify-end">
-          <div className="relative w-full max-w-xs md:max-w-sm aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 bg-white/5">
+          <div className="relative w-full max-w-xs md:max-w-sm aspect-[5/6] rounded-2xl overflow-hidden border border-white/10 bg-white/5">
             {/* me.jpg должен лежать в public/me.jpg */}
             <Image
-              src="/me.jpg"
+              src="/me-2.jpg"
               alt="Афонин Владислав"
               fill
               className="object-cover"
